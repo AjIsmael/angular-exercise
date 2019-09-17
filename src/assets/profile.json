@@ -1,0 +1,38 @@
+[
+  {
+    "id":29,
+    "accountType": "AAA",
+    "availableCash": 39160334.42,
+    "change": -0.07
+  },
+  {
+    "id":146,
+    "accountType": "IRA",
+    "availableCash": 15884302.39,
+    "change": 0.03
+  },
+  {
+    "id":1812,
+    "accountType": "AAA",
+    "availableCash": 2010926.10,
+    "change": 0.21
+  },
+  {
+    "id":2019,
+    "accountType": "REG",
+    "availableCash": 13465679.34,
+    "change": 0
+  },
+  {
+    "id":3810,
+    "accountType": "AAA",
+    "availableCash": 10050054.07,
+    "change": 0.07
+  },
+  {
+    "id":5200,
+    "accountType": "IRA",
+    "availableCash": 5763.36,
+    "change": 0.07
+  }
+]

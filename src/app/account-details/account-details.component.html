@@ -1,0 +1,30 @@
+<div class="grid-container">
+  <div (click)="sort('id')">
+    {{title1}}
+  </div>
+  <div class="second-column-grid" (click)="sort('availableCash')">
+    <div>
+      {{title2}}
+    </div>
+    <div>
+      {{title3}}
+    </div>
+  </div>
+
+</div>
+<div class="grid-container" *ngFor="let acco of account; index as i;" >
+
+  <div *ngIf = "i < accountToShow">
+    {{acco.accountType}}-{{acco.id | number : '4.0' | noComma}}
+  </div>
+  <div class="second-column-grid" *ngIf = "i < accountToShow">
+    <div>
+      {{acco.availableCash | currency: 'USD':'symbol' : '1.2-2'}}
+    </div>
+    <div>
+      {{acco.change | number: '1.2-2'}}
+    </div>
+  </div>
+
+</div>
+<button (click)=toggle()> {{buttonDesc}} </button>

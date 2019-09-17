@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.grid-container{
+  display: grid;
+  width: 50%;
+  grid-template: auto/ 50% 50%;
+
+}
+div{
+  border-radius: .05%;
+  border-style: solid;
+}
+
+.grid-container . col-2-grid{
+  display:block;
+}
