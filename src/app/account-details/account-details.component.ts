@@ -18,6 +18,9 @@ export class AccountDetailsComponent implements OnInit {
   records: Account;
   accountToShow = 3;
   buttonDesc = 'Load More';
+  chosenColumn: string;
+  idSort: string;
+  cashSort: string;
   constructor(private listService: ListService) { }
 
   ngOnInit() {
@@ -29,9 +32,39 @@ export class AccountDetailsComponent implements OnInit {
   this.isDesc = !this.isDesc; //change the direction
   this.column = property;
   let direction = this.isDesc ? 1 : -1;
+  if(property === 'id'){
+    this.cashSort='';
+    if(this.idSort === ''){
+      this.idSort = '^';
+      } else {
+        if(this.idSort === '^'){
+          this.idSort = 'v';
+         } else{
+           this.idSort = '^';
+         }
+
+      }
+        
+  }else{
+    this.idSort = '';
+    if(this.cashSort === ''){
+      this.cashSort = '^';
+      } else {
+        if(this.cashSort === '^'){
+          this.cashSort = 'v';
+         } else{
+           this.cashSort = '^';
+         }
+
+      }
+    
+
+  }
 
     this.account.sort(function (a, b) {
+
       if (a[property] < b[property]) {
+        
         return -1 * direction;
       }
       else if (a[property] > b[property]) {

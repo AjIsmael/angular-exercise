@@ -1,0 +1,4 @@
+.content-grid :first-child{
+  font-weight: bold;
+  color: rgb(21,115,177); 
+}
